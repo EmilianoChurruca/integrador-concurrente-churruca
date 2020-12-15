@@ -1,0 +1,11 @@
+El presente ejercicio muestra los beneficios de trabajar con semáforos.
+A saber:
+- Cada semáforo de compra (teléfono, App, caja) inicializa en uno, con esto se asegura que 
+pueda ingresar de a uno en cada caso, de no existir el semáforo, ocurre que varios hilos 
+(personas que van a comprar) quieran acceder al mismo momemento a comprar, en este caso puntual
+mientras se simula con el sleep la preparación del pedido (todavía está atendiendo al cliente)
+no se podría atender al siguiente, de no existir, estaróia preparando varios a la vez.
+- En cuanto al semáforo del repartidor, arranca en cero para que no pueda repartir nada si no 
+se generó algún pedido. En este caso se podría hacer sin semáforos, guardando los pedidos en 
+una lista y con un while controlar que haga la entrega si es que ya hay alguno cargado.
+Si bien existe esa posibilidad, es mucho más complejo. Con un semáforo se soluciona.
